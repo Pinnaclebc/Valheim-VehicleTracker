@@ -18,7 +18,7 @@ Vehicle Tracker is a lightweight client mod for **Valheim** that makes sure you 
 
 ## Installation
 
-1. Install **[BepInExPack Valheim](https://www.google.com/search?q=https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/)** if you have not already.
+1. Install **[BepInExPack Valheim](https://thunderstore.io/c/valheim/p/denikson/BepInExPack_Valheim/)** if you have not already.
 2. Download the latest release from the **Releases** tab.
 3. Extract and place `VehicleTracker.dll` inside your game directory under:
 ```text
