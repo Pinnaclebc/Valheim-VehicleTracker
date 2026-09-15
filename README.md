@@ -102,7 +102,7 @@ CartGlowColor = #FFD700
 ## Building from Source
 
 1. Clone this repository to your machine.
-2. Open the solution file in **Visual Studio 2022**.
-3. Ensure your project references `assembly_valheim.dll`, `UnityEngine.dll`, `UnityEngine.CoreModule.dll`, `Splatform.dll`, and `0Harmony.dll` from your local game directory.
+2. Open the solution file in **Visual Studio**.
+3. Ensure your project references `assembly_valheim.dll`, `UnityEngine.dll`, `UnityEngine.CoreModule.dll`, `Splatform.dll`, and `0Harmony20.dll` from your local game directory.
 4. Target `.NET Framework 4.8` with language version `8.0`.
 5. Build using the `Release` configuration to generate `VehicleTracker.dll`.
