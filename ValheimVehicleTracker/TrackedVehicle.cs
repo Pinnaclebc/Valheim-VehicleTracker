@@ -11,6 +11,7 @@ namespace VehicleTracker
         public Color glowColor = Color.cyan;
         private Light glowLight;
         private float updateTimer = 0f;
+        private ZNetView nview;
 
         public void Init(string name, Minimap.PinType pinType, Color customColor)
         {
@@ -94,7 +95,26 @@ namespace VehicleTracker
 
         void OnDestroy()
         {
-            if (HasActivePin())
+
+            if (nview == null)
+            {
+                nview = GetComponent<ZNetView>();
+            }
+
+
+            bool isActuallyDestroyed = false;
+            if (nview != null && nview.GetZDO() != null)
+            {
+                var piece = GetComponent<Piece>();
+                var wear = GetComponent<WearNTear>();
+
+                if (wear != null && wear.GetHealthPercentage() <= 0f)
+                {
+                    isActuallyDestroyed = true;
+                }
+            }
+
+            if (isActuallyDestroyed && HasActivePin())
             {
                 Minimap.instance.RemovePin(pin);
             }
